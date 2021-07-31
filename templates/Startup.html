@@ -1,0 +1,102 @@
+<html>
+<head>
+<link href="../static/images/logo.png" rel="icon" sizes="32x32" type="image/png">
+<title>StartKonnect | Startup Profile</title>
+<link rel="stylesheet" type="text/css" href="../static/css/Startup.css">
+
+
+
+</head>
+ 
+<body>
+<div class = "bg-img"></div>
+<div class="form-structor">
+<h3 style="color: white">STARTUP PROFILE</h3>
+
+<div class="Startup">
+<form action="http://localhost:5000/viewprofile/startup" method="POST" id="viewprofile">
+<table align="center" cellpadding = "10" class="form-holder">
+ 
+
+<!----- Company Domain ---------------------------------------------------------->
+<tr>
+<td>COMPANY DOMAIN</td>
+<td><input type="text" name="Company_Domain" maxlength="100" /></td>
+</tr>
+
+
+<!----- About ---------------------------------------------------------->
+<tr>
+<td>ABOUT <br /><br /><br /></td>
+<td><textarea name="About" rows="4" cols="30" placeholder= "Provide insights about your Organisation"></textarea></td>
+</tr>  
+ 
+<!----- Mobile Number ---------------------------------------------------------->
+<tr>
+<td>CONTACT NUMBER</td>
+<td>
+<input type="text" name="Contact_Number" maxlength="10" placeholder= "+xxxxxxxxxx" />
+(With STD Code)
+</td>
+</tr>
+ 
+<!----- WEBSITE ---------------------------------------------------------->
+<tr>
+<td>WEBSITE</td>
+<td>
+<input type="text" name="Website" />
+</td>
+</tr>
+
+<!----- Address ---------------------------------------------------------->
+<tr>
+<td>ADDRESS <br /><br /><br /></td>
+<td><textarea name="Address" rows="4" cols="30"></textarea></td>
+</tr>
+ 
+<!----- Pin Code ---------------------------------------------------------->
+<tr>
+<td>PIN CODE</td>
+<td><input type="text" name="Pin_Code" maxlength="6" />
+(6 digit number)
+</td>
+</tr>
+
+<!----- City ---------------------------------------------------------->
+<tr>
+<td>CITY</td>
+<td><input type="text" name="City" />
+</td>
+</tr>
+ 
+
+<!----- State ---------------------------------------------------------->
+<tr>
+<td>STATE</td>
+<td><input type="text" name="State" />
+</td>
+</tr>
+ 
+<!----- Country ---------------------------------------------------------->
+<tr>
+<td>COUNTRY</td>
+<td><input type="text" name="Country" /></td>
+</tr>
+
+
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<button type="submit" value="Submit" class="submit-btn" onclick="document.getElementById('viewprofile').submit();">Submit</button>
+<input type="reset" value="Reset" class="reset-btn"></input>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+<div class = "bg-text">
+    <img src="../static/images/logo.png" width="60px" height="50px"/>StarKonnect
+</div>
+</body>
+</html>

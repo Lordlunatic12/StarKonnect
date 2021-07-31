@@ -1,0 +1,177 @@
+<html>
+<head>
+<link href="../static/images/logo.png" rel="icon" sizes="32x32" type="image/png">
+<title>Freelancer Profile</title>
+<link rel="stylesheet" type="text/css" href="../static/css/Freelancer.css">
+
+</head>
+
+<body>
+<div class = "bg-img"></div>
+<div class="form-structor">
+<h3 style="color: white">FREELANCER PROFILE</h3>
+
+<div class="freelancer">
+<form action="http://localhost:5000/viewprofile/freelancer" method="POST" id="viewprofile">
+<table align="center" cellpadding = "10" class="form-holder">
+
+<!----- Date Of Birth -------------------------------------------------------->
+<tr>
+<td>DATE OF BIRTH</td>
+
+<td>
+<input type="date" style="cursor:pointer" name="dob"></input>
+
+</td>
+</tr>
+
+<!----- Mobile Number ---------------------------------------------------------->
+<tr>
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" placeholder= "xxxxxxxxxx" />
+(10 digit number)
+</td>
+</tr>
+
+<!----- Gender ----------------------------------------------------------->
+<tr>
+<td>GENDER</td>
+<td>
+<label class="container">Female
+<input type="radio" name="Gender" value="Female" style="margin-left:0" id="radio" />
+<span class="checkmark"></span>
+</label>
+<label class="container">Male
+<input type="radio" name="Gender" value="Male" style="margin-left:0" id="radio"/>
+<span class="checkmark"></span>
+</label>
+<label class="container">Other
+<input type="radio" name="Gender" value="Other" style="margin-left:0" id="radio"/>
+<span class="checkmark"></span>
+</label>
+</td>
+</tr>
+
+<!----- City ---------------------------------------------------------->
+<tr>
+<td>CITY</td>
+<td><input type="text" name="city"/>
+</td>
+</tr>
+
+<!----- Pin Code ---------------------------------------------------------->
+<tr>
+<td>PIN CODE</td>
+<td><input type="text" name="pincode" maxlength="6" />
+(6 digit number)
+</td>
+</tr>
+
+<!----- State ---------------------------------------------------------->
+<tr>
+<td>STATE</td>
+<td><input type="text" name="State"/>
+</td>
+</tr>
+
+<!----- Country ---------------------------------------------------------->
+<tr>
+<td>COUNTRY</td>
+<td><input type="text" name="Country" /></td>
+</tr>
+
+<!----- About ---------------------------------------------------------->
+<tr>
+<td>ABOUT <br /><br /><br /></td>
+<td><textarea name="About" rows="4" cols="30" placeholder= "Let's get to know you, tell us about yourself"></textarea></td>
+</tr>
+
+
+<!----- Qualification---------------------------------------------------------->
+<tr>
+<td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
+<td>
+<table class="qualification">
+
+<tr>
+<td align="center"><b>Sl.No.</b></td>
+<td align="center"><b>Examination</b></td>
+<td align="center"><b>Institute</b></td>
+<td align="center"><b>Year of Passing</b></td>
+<td align="center"><b>Percentage</b></td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Class X</td>
+<td><input type="text" name="ClassX_Institute" maxlength="30" /></td>
+<td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+<td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Class XII</td>
+<td><input type="text" name="ClassXII_Institute" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Graduation</td>
+<td><input type="text" name="Graduation_Institute" maxlength="30" /></td>
+<td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
+<td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Masters</td>
+<td><input type="text" name="Masters_Institute" maxlength="30" /></td>
+<td><input type="text" name="Masters_YrOfPassing" maxlength="30" /></td>
+<td><input type="text" name="Masters_Percentage" maxlength="30" /></td>
+</tr>
+
+<tr>
+<td></td>
+<td></td>
+<td align="center">(10 char max)</td>
+<td align="center"></td>
+<td align="center">(upto 2 decimal)</td>
+</tr>
+</table>
+
+</td>
+</tr>
+
+<!----- SKILLS ---------------------------------------------------------->
+<tr>
+    <td>SKILLS <br /><br /><br /></td>
+    <td><textarea name="Skills" rows="4" cols="30" >(comma seperated)</textarea></td>
+</tr>
+
+<!----- Certifications ---------------------------------------------------------->
+<tr>
+<td>CERTIFICATIONS AND PROJECTS <br /><br /><br /></td>
+<td><textarea name="Certifications" rows="4" cols="30" >(comma seperated)</textarea></td>
+</tr>
+
+
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<button type="submit" value="Submit" class="submit-btn" onclick="document.getElementById('viewprofile').submit();">Submit</button>
+<input type="reset" value="Reset" class="reset-btn"></input>
+</td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+<div class = "bg-text">
+    <img src="../static/images/logo.png" width="60px" height="50px"/>StarKonnect
+</div>
+</body>
+</html>

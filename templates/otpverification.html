@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../static/css/otpstyles.css">
+        <link href="../static/images/logo.png" rel="icon" sizes="32x32" type="image/png">
+	    <title>StarKonnect | Login</title>
+	</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ {% with messages = get_flashed_messages() %}  
+         {% if messages %}  
+               {% for message in messages %}  
+            <div class="alert alert-warning" id="alertmessage">
+                <button type="button" class="close" onclick="close_flash_message()">x</button>
+				{{ message }}
+            </div>
+               {% endfor %}  
+         {% endif %}  
+      {% endwith %}
+<script>
+function close_flash_message(){  
+    document.all.alertmessage.style.display='none';
+    return false;  
+}
+</script>
+<script>
+$(document).ready(function() {
+$(".resend").click(function() {
+
+$.ajax({
+type: "POST",
+url: "http://localhost:5000/resend_verify",
+success: function() {
+alert("OTP is resent");
+}
+});
+});
+$(document).keypress(function(e){
+                var keycode = e.which;
+                if(keycode == 13){
+                    $(".submit-btn").click(); 
+					return e.preventDefault();
+                }
+            });
+			});
+</script>
+<div class="bg-img"></div>
+<div class="form-structor">
+	<form action="http://localhost:5000/authenticate" method="POST" class="verification">
+		<h2 class="form-title" id="Verification">Email Verification</h2>
+		<div class="form-holder">
+			<label class = "container" >Please enter the 6 digit OTP sent to your Email ID
+			<input class="input" type="otp" placeholder="Enter the OTP" name="otp">
+			</label>
+			<button class="resend">Resend OTP</button>
+		</div>
+		<button class="submit-btn">Submit</button>
+	</form>
+  </div>
+<div class = "bg-text">
+    <img src="../static/images/logo.png" width="60px" height="60px"/>StarKonnect
+</div>
+</body>
+</html>

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Titillium+Web:ital,wght@1,700&display=swap');
+
+h3{
+  font-size: 20pt;
+  font-style: normal;
+  font-weight: bold;
+  color:black;
+  text-align: center;
+
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin:0;
+  font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+input:not(.reset-btn) {
+border-radius: 5px;
+border: 1px solid #ccc;
+background: rgba(255,255,255,0.7);
+height: 30px;
+  line-height: 20px;
+  padding: 8px 15px;
+  width: 400px;
+}
+
+#nav-bar
+	{
+		background-color:rgba(0,0,0,0);
+		position: sticky;
+		top:0;
+		z-index:10;
+	}
+
+	.nav-link:hover{
+		background-color: aquamarine;
+		-webkit-transition: all 0.3s ease;
+	}
+	nav{
+		background-image:url(../images/bg-header-desktop.svg);
+		background-color:hsl(180,29%,50%);
+		background-size:cover;
+		background-repeat:no-repeat;
+		height: 140px;
+		margin-bottom:80px;
+	}
+	nav > li:first-child {
+		  margin-left: 20px;
+	}
+	.navbar
+	{
+
+		padding: 0 !important;
+	}
+
+	.navbar-nav li
+	{
+		display: block;
+		padding: 0px;
+	}
+
+	.title img{
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	.title span{
+		margin-top: 0px;
+	}
+
+	.title li{
+		display: block;
+	}
+
+	#navbarNavDropdown {
+		display: block;
+	}
+	.navbar-nav li a
+	{
+		color:white !important;
+		float:right;
+		text-align: center;
+		text-transform:uppercase;
+		border-radius:10px;
+		height: 35px;
+		color:white;
+		padding:7px 7px 0px 7px;
+		font-weight:500;
+		font-size: 20px;
+	}
+
+.container {
+	position: relative;
+	padding-left: 25px;
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	font-size: 15px;
+	-webkit-user-select: none;
+	user-select: none;
+	color: black;
+}
+
+.container input{
+  position: absolute;
+  opacity:0;
+  cursor: pointer
+}
+
+.container .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 18px;
+	width: 18px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+.container:hover input:not(:checked) ~ .checkmark {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	-webkit-transition: all 0.3s ease;
+}
+
+.container input:checked ~ .checkmark {
+background-color: #2196F3;
+}
+
+.container .checkmark:after {
+	content: "";
+	display: none;
+	position: absolute;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+	left: 5px;
+	top: 5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+textarea {
+border-radius: 5px;
+border: 1px solid #ccc;
+background: rgba(255,255,255,0.7);
+width: 400px;
+}
+
+.form-structor {
+margin-left: 200px;
+width: 65%;
+position: relative;
+overflow:hidden;
+}
+
+.bg-img {
+	background:hsl(180,52%,96%);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    filter: blur(2px);
+	height: 180%;
+	position: absolute;
+	width: 100%;
+}
+
+.bg-text {
+  font-size:20px;
+	color: white;
+	font-weight: bold;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	padding: 20px;
+
+}
+
+.form-structor .freelancer {
+background-color: #222;
+position: relative;
+background-repeat: no-repeat;
+background-position: center;
+background-image: url("https://i2.wp.com/files.123freevectors.com/wp-content/original/33077-free-turquoise-blur-background-image.jpg?w=600");
+background-size: 1250px;
+border-radius: 30px;
+margin-left: 150px;
+margin-top: 50px;
+width: 80%;
+  border: 2px solid navy
+}
+
+.form-structor .freelancer .form-holder{
+font-family: 'Titillium Web',sans-serif;
+  color:black;
+  font-size: 12pt;
+  font-weight: bold;
+  text-align:left;
+  margin-top: 30px;
+  margin-left: 70px;
+  width: 50px;
+
+}
+
+
+.submit-btn ,.reset-btn {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 15px 45px;
+  margin-right: 45px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  width: 25%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  text-align: center;
+  -webkit-transition: all 0.3s ease;
+}
+ .submit-btn:hover {
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+ .submit-btn:active {
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+ .reset-btn:hover {
+  transition: all 0.1s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+ .reset-btn:active {
+  transition: all 0.1s ease;
+  background-color: rgba(0, 0, 0, 0.9);
+}

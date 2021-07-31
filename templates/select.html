@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../static/css/select.css">
+		<link href="../static/images/logo.png" rel="icon" sizes="32x32" type="image/png">
+		<title>StarKonnect | Login</title>
+	</head>
+<body>
+<div class = "bg-img"></div>
+<div class="form-structor">
+	<form class="SelectAccountType" method="POST" action="http://localhost:5000/selection">
+		<h2 class="form-title" id="Select Account Type">Select Account Type</h2>
+		<div class="form-holder">
+			<label class = "container" >Freelancer
+			<input type="checkbox" id=1 onclick='setOnlyThis(this.id)' name="chkbox" value="freelancer">
+			<span class="checkmark"></span>
+			</label>
+			<label class = "container" >StartUp
+			<input type="checkbox" id=2 onclick='setOnlyThis(this.id)' name='chkbox' value="startup">
+			<span class="checkmark"></span>
+			</label>
+			<script>
+			function setOnlyThis(id) {
+			document.getElementById(3-id).checked = false;
+			}
+			</script>
+		</form>
+		<button class="submit-btn">Submit</button>
+	</div>
+  </div>
+<div class = "bg-text">
+	<img src="../static/images/logo.png" width="60px" height="60px"/>StarKonnect
+</div>
+</body>
+</html>
